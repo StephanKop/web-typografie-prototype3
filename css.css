@@ -137,7 +137,8 @@ iframe {
 }
 
 .voice1::before {
-	content: " ";
+	content: "[I]";
+	/*content: url(1x/I.png);*/
 	display: block;
 	position: absolute;
 	top: 0;
@@ -156,7 +157,13 @@ iframe {
 	font-style: Italic;
 	font-weight: 400;
 	color: white;
+    padding-left: 1em;
 	animation: textShadow 1.6s infinite;
+}
+
+.voice2::before {
+    content: "[K] "
+	/*content: url(1x/K.png);*/
 }
 
 .voice2 {
@@ -245,8 +252,25 @@ iframe {
 	100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.sound1 {
-	/*animation: fadeIt1 1s ease-in-out;*/
+@keyframes opacity {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound1::before {
+    animation: opacity 1.5s ease;
+    opacity: 0;
+    content: "[buzz]";
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    z-index: 99;
+    transform: translateX(-50%);
+    left: 50%;
+    font-family: "Brenner Slab";
+    font-style: Normal;
+    font-weight: 200;
 }
 
 .sound1 iframe {
@@ -272,13 +296,36 @@ iframe {
 	100% { transform: scale(1); }
 }
 
-.sound2 {
-	/*animation: fadeIt2 0.75s ease-in-out;*/
+@keyframes opacity2 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound2::before {
+    animation: opacity2 1.5s ease;
+    opacity: 0;
+    content: "[Beep]";
+    color: white;
+
 }
 
 .sound2 iframe {
 	animation: zoom1 0.75s ease-in-out, glowingYellow 0.75s ease;
 	/*animation: glowing 1s ease-in-out;*/
+}
+
+@keyframes opacity3 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound3::before {
+    animation: opacity3 1s ease;
+    opacity: 0;
+    content: "[Rumble]";
+    color: white;
 }
 
 .sound3 iframe{
@@ -291,6 +338,32 @@ iframe {
 	100% { background-color: #000000; }
 }
 
+@keyframes opacity4 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound4::before {
+    animation: opacity4 1s ease;
+    opacity: 0;
+    content: "[Alarm]";
+    color: white;
+}
+
+@keyframes opacity4 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound4::before {
+    animation: opacity4 1s ease;
+    opacity: 0;
+    content: "[Rumbling alarm]";
+    color: white;
+}
+
 .sound4 {
 	/*animation: fadeIt3 1s ease-in-out;*/
 	animation: shake1 0.75s ease;
@@ -300,8 +373,17 @@ iframe {
 	animation: zoom1 1s ease-in-out, glowing2 1s ease, shake1 0.75s ease;
 }
 
-.sound5 {
-	/*animation: shakeSecondary 1s ease;*/
+@keyframes opacity5 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound5::before {
+    animation: opacity5 1s ease;
+    opacity: 0;
+    content: "[Rumble]";
+    color: white;
 }
 
 .sound5 iframe {
@@ -314,8 +396,17 @@ iframe {
 	100% { background-color: #000000; }
 }
 
-.sound6 {
-	/*animation: shake1 0.75s ease-in-out;*/
+@keyframes opacity6 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound6::before {
+    animation: opacity6 1s ease;
+    opacity: 0;
+    content: "[Alarm]";
+    color: white;
 }
 
 .sound6 iframe {
@@ -342,6 +433,19 @@ iframe {
 	100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+@keyframes opacity7 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound7::before {
+    animation: opacity7 1s ease;
+    opacity: 0;
+    content: "[Hard rumble]";
+    color: white;
+}
+
 .sound7 {
 	/*animation: fadeIt5 1s ease-in-out;*/
 	animation: shake5 1s ease-in-out;
@@ -357,8 +461,17 @@ iframe {
 	100% { background-color: #000000; }
 }
 
-.sound8 {
-	/*animation: fadeIt6 1s ease-in-out;*/
+@keyframes opacity8 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound8::before {
+    animation: opacity8 1s ease;
+    opacity: 0;
+    content: "[Loud alarm]";
+    color: white;
 }
 
 .sound8 iframe {
@@ -369,6 +482,19 @@ iframe {
 	0%   { background-color: #000000; }
 	99%  { background-color: #FFFFFF; }
 	100% { background-color: #000000; }
+}
+
+@keyframes opacity9 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+.sound9::before {
+    animation: opacity9 30s ease;
+    opacity: 0;
+    content: "[high pitched noise getting louder]";
+    color: white;
 }
 
 .sound9 {
