@@ -133,14 +133,17 @@ Feel free to adjust the defaults to your needs.
 }
 
 iframe {
-	opacity: 0.75;
+	/*opacity: 0.75;*/
+	z-index: 200;
 }
 
 .voice1::before {
-	content: "[I]";
-	/*content: url(1x/I.png);*/
+	/*content: "[I]";*/
+	content: url(1x/I.png);
 	display: block;
 	position: absolute;
+	margin-left: -2em;
+	margin-top: -0.3em;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -150,6 +153,7 @@ iframe {
 	/*background-size: 100% 2px, 3px 100%;*/
 	background-size: 1px 2px, 3px 1px;
 	pointer-events: none;
+	padding: 2px 2px 2px 2px;
 }
 
 .voice1 {
@@ -157,13 +161,56 @@ iframe {
 	font-style: Italic;
 	font-weight: 400;
 	color: white;
-    padding-left: 1em;
+    margin-top: -5em;
 	animation: textShadow 1.6s infinite;
+	padding: 5px 5px 5px 5px;
+	mix-blend-mode: screen;
+}
+
+.left {
+	transform: translateX(-50%);
+	left: 25% !important;
+	max-width: 10em;
+	animation: textShadow 20s infinite !important;
+	margin-top: -10em;
+}
+
+.right {
+	transform: translateX(-50%);
+	left: 75% !important;
+	max-width: 10em;
+	margin-top: -10em !important;
+}
+
+.blackFont1::before {
+	content: "" !important;
+	margin-left: 0em !important;
+}
+.blackFont2::before {
+	content: "" !important;
+	margin-left: 0em !important;
+}
+.blackFont3::before {
+	content: "" !important;
+	margin-left: 0em !important;
 }
 
 .voice2::before {
-    content: "[K] "
-	/*content: url(1x/K.png);*/
+    /*content: "[K] "*/
+	content: url(1x/K.png);
+	display: block;
+	position: absolute;
+	margin-left: -2em;
+	margin-top: -0.3em;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	background-size: 1px 2px, 3px 1px;
+	pointer-events: none;
+	padding: 2px 2px 2px 2px;
+
 }
 
 .voice2 {
@@ -171,7 +218,11 @@ iframe {
 	font-style: Italic;
 	font-weight: 400;
 	/*color: #9b9b9b;*/
+	margin-top: -5em;
 	color: yellow;
+	padding: 5px 5px 5px 5px;
+	mix-blend-mode: screen;
+	animation: textShadow 1.6s infinite;
 }
 
 .voice3 {
@@ -181,7 +232,7 @@ iframe {
 	font-style: Italic;
 	font-weight: 400;
 	color: red;
-	/*margin-top: -17em;*/
+	margin-top: -5em;
 	margin-left: -5em;
 }
 
@@ -262,15 +313,18 @@ iframe {
     animation: opacity 1.5s ease;
     opacity: 0;
     content: "[buzz]";
+	/*margin-top: 50%;*/
+	mix-blend-mode: screen;
+	bottom: 0;
     color: white;
     font-size: 2em;
     position: absolute;
     z-index: 99;
     transform: translateX(-50%);
     left: 50%;
-    font-family: "Brenner Slab";
-    font-style: Normal;
-    font-weight: 200;
+	font-family: "Brenner Sans Condensed";
+	font-style: Normal;
+	font-weight: 200;
 }
 
 .sound1 iframe {
@@ -362,6 +416,7 @@ iframe {
     opacity: 0;
     content: "[Rumbling alarm]";
     color: white;
+	margin-bottom: -2em;
 }
 
 .sound4 {
@@ -518,17 +573,33 @@ body {
 }
 
 .blackFont1 {
-	color: black;
+	color: white;
+	margin-top: -8em;
+	font-family: "Brenner Sans Condensed";
+	font-style: Italic;
+	font-weight: 600;
+	font-size: 3em !important;
+	mix-blend-mode: screen;
 }
 
 .blackFont2 {
-	color: black;
-	margin-top: 2em;
+	color: white;
+	margin-top: -7em;
+	font-family: "Brenner Sans Condensed";
+	font-style: Italic;
+	font-weight: 600;
+	font-size: 3em !important;
+	mix-blend-mode: screen;
 }
 
 .blackFont3 {
-	color: black;
-	margin-top: 4em;
+	color: white;
+	margin-top: -6em;
+	font-family: "Brenner Sans Condensed";
+	font-style: Italic;
+	font-weight: 600;
+	font-size: 3em !important;
+	mix-blend-mode: screen;
 }
 
 
